@@ -1,0 +1,8 @@
+@import 'tailwindcss' source(none);
+@source '../app';
+@source '../components';
+
+@theme {
+  --font-sans: var(--font-inter), Arial, sans-serif;
+  --font-heading: var(--font-manrope), Arial, sans-serif;
+}
