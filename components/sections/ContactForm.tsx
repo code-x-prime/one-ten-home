@@ -4,13 +4,13 @@ import Link from 'next/link'
 import { ArrowUpRight, Check } from 'lucide-react'
 
 const input =
-  'mt-2 block w-full rounded-2xl border border-black/15 bg-white px-5 py-4 text-sm text-[#111] outline-none transition focus-visible:border-[#F36D2B] focus-visible:ring-2 focus-visible:ring-[#FF8A00]/30'
-const label = 'block text-[11px] font-bold tracking-[.12em] text-[#555]'
+  'mt-2 block w-full min-w-0 rounded-2xl border border-black/15 bg-white px-5 py-4 text-sm text-[#111] outline-none transition focus-visible:border-[#F36D2B] focus-visible:ring-2 focus-visible:ring-[#FF8A00]/30'
+const label = 'block min-w-0 text-[11px] font-bold tracking-[.12em] text-[#555]'
 export default function ContactForm() {
   const [status, setStatus] = useState('')
   return (
     <form
-      className="rounded-[28px] border border-black/10 bg-[#F4F1E8] p-6 shadow-[0_20px_60px_rgba(17,17,17,.06)] sm:p-9 lg:p-11"
+      className="w-full min-w-0 rounded-[28px] border border-black/10 bg-[#F4F1E8] p-6 shadow-[0_20px_60px_rgba(17,17,17,.06)] sm:p-9 lg:p-11"
       onSubmit={(e) => {
         e.preventDefault()
         const d = new FormData(e.currentTarget)

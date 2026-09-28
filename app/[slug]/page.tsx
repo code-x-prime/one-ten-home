@@ -468,8 +468,8 @@ function Contact() {
         <div className="pointer-events-none absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-[#0877D9]/[.06] blur-3xl" />
 
         <div className="relative mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-12 xl:px-16">
-          <div className="grid gap-12 lg:grid-cols-[1.05fr_.95fr] lg:gap-16">
-            <div>
+          <div className="grid min-w-0 gap-12 lg:grid-cols-[1.05fr_.95fr] lg:gap-16">
+            <div className="min-w-0">
               <p
                 data-hero-line
                 className="mb-5 flex items-center gap-3 text-[11px] font-bold tracking-[.19em] text-[#666]"
@@ -513,7 +513,7 @@ function Contact() {
                 })}
               </div>
 
-              <div data-reveal className="mt-9 grid gap-3">
+              <div data-reveal className="mt-9 grid min-w-0 gap-3">
                 <a
                   href="tel:6476191472"
                   className="group flex items-center gap-4 rounded-2xl bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg"
@@ -524,7 +524,7 @@ function Contact() {
                   >
                     <Phone size={22} />
                   </span>
-                  <span className="flex-1">
+                  <span className="min-w-0 flex-1">
                     <small className="block text-[10px] font-bold tracking-[.16em] text-[#F36D2B]">
                       CALL OR TEXT
                     </small>
@@ -547,7 +547,7 @@ function Contact() {
                   >
                     <Phone size={22} />
                   </span>
-                  <span className="flex-1">
+                  <span className="min-w-0 flex-1">
                     <small className="block text-[10px] font-bold tracking-[.16em] text-[#0877D9]">
                       ALTERNATE LINE
                     </small>
@@ -570,11 +570,11 @@ function Contact() {
                   >
                     <Mail size={22} />
                   </span>
-                  <span className="flex-1">
+                  <span className="min-w-0 flex-1">
                     <small className="block text-[10px] font-bold tracking-[.16em] text-[#2FA35C]">
                       EMAIL US
                     </small>
-                    <strong className="mt-1 block text-sm font-semibold tracking-tight sm:text-base">
+                    <strong className="mt-1 block truncate text-sm font-semibold tracking-tight sm:text-base">
                       onetenhomesolutions@gmail.com
                     </strong>
                   </span>
@@ -609,7 +609,7 @@ function Contact() {
               </div>
             </div>
 
-            <div data-reveal>
+            <div data-reveal className="min-w-0">
               <ContactForm />
             </div>
           </div>

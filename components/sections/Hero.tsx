@@ -9,12 +9,18 @@ const slides = [
   {
     src: '/images/hero-main.png',
     alt: 'An HVAC technician servicing a residential outdoor air conditioning condenser beside a modern home',
+    mobilePosition: 'object-[70%_center]',
   },
   {
     src: '/images/outdoor-ac.jpg',
     alt: 'Residential outdoor air conditioning system beside a home',
+    mobilePosition: 'object-center',
   },
-  { src: '/images/technician-furnace.jpg', alt: 'HVAC technician checking a furnace' },
+  {
+    src: '/images/technician-furnace.jpg',
+    alt: 'HVAC technician checking a furnace',
+    mobilePosition: 'object-[35%_center]',
+  },
 ]
 
 export default function Hero() {
@@ -31,7 +37,7 @@ export default function Hero() {
       <div className="relative mx-auto max-w-[1600px] overflow-hidden rounded-[22px] sm:rounded-[28px] lg:rounded-[32px]">
         <div
           data-hero-image
-          className="relative aspect-[4/5] w-full sm:aspect-[16/10] lg:aspect-[21/9]"
+          className="relative min-h-[560px] w-full sm:aspect-[16/10] sm:min-h-0 lg:aspect-[21/9]"
         >
           {slides.map((s, i) => (
             <Image
@@ -43,65 +49,66 @@ export default function Hero() {
               loading={i === 0 ? 'eager' : 'lazy'}
               sizes="100vw"
               quality={90}
-              className={`object-cover object-[70%_center] transition-opacity duration-1000 ease-in-out sm:object-center ${i === index ? 'opacity-100' : 'opacity-0'}`}
+              className={`object-cover ${s.mobilePosition} transition-opacity duration-1000 ease-in-out sm:object-center ${i === index ? 'opacity-100' : 'opacity-0'}`}
             />
           ))}
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent sm:bg-gradient-to-r sm:from-[#FAF8F2] sm:via-[#FAF8F2]/70 sm:to-transparent lg:from-[#FAF8F2] lg:via-[#FAF8F2]/40 lg:to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/35 to-black/45 sm:bg-gradient-to-r sm:from-[#FAF8F2] sm:via-[#FAF8F2]/70 sm:to-transparent lg:from-[#FAF8F2] lg:via-[#FAF8F2]/40 lg:to-transparent" />
+          <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-black/60 to-transparent sm:hidden" />
 
-        <div className="absolute inset-0 flex flex-col justify-end p-5 sm:justify-center sm:p-8 lg:p-14 xl:p-16">
-          <div className="max-w-xl">
-            <p
-              data-hero-line
-              className="mb-4 flex items-center gap-3 text-[11px] font-bold tracking-[.18em] text-white sm:text-[#626262]"
-            >
-              <span className="h-px w-8 bg-[#F3692C]" />
-              ONE TEN HOME SOLUTIONS <span className="hidden text-[#999] sm:inline">/</span>{' '}
-              <span className="hidden sm:inline">HEATING & AIR CONDITIONING</span>
-            </p>
-            <h1
-              data-hero-line
-              className="font-heading text-4xl font-semibold leading-[1.05] tracking-[-.055em] text-white sm:text-5xl sm:text-[#111] lg:text-6xl xl:text-[4.5rem]"
-            >
-              Comfort,
-              <br />
-              engineered for
-              <br />
-              <span className="bg-gradient-to-r from-[#F36A25] via-[#ed6d32] to-[#0877D9] bg-clip-text text-transparent">
-                every season.
-              </span>
-            </h1>
-            <p
-              data-hero-line
-              className="mt-5 max-w-md text-sm leading-7 text-white/90 sm:text-base sm:leading-8 sm:text-[#606060] md:text-lg"
-            >
-              Professional heating and air conditioning services designed to keep your home
-              comfortable through every season.
-            </p>
-            <div data-hero-line className="mt-7 flex flex-col gap-3 sm:flex-row">
-              <Link
-                href="/contact"
-                className="inline-flex min-h-14 items-center justify-center gap-3 rounded-full bg-[#F36D2B] px-7 text-xs font-bold text-white transition hover:-translate-y-0.5 hover:bg-[#dd581a]"
+          <div className="relative flex h-full flex-col justify-end p-5 pb-8 sm:justify-center sm:p-8 sm:pb-8 lg:p-14 xl:p-16">
+            <div className="max-w-xl">
+              <p
+                data-hero-line
+                className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] font-bold tracking-[.18em] text-white sm:mb-4 sm:text-[#626262]"
               >
-                REQUEST SERVICE
-                <ArrowUpRight size={17} />
-              </Link>
-              <a
-                href="tel:6476191472"
-                className="inline-flex min-h-14 items-center justify-center gap-3 rounded-full border border-white/40 bg-white/10 px-7 text-xs font-bold text-white backdrop-blur transition hover:border-white sm:border-black/15 sm:bg-white sm:text-[#111] sm:hover:border-black"
+                <span className="h-px w-8 bg-[#F3692C]" />
+                ONE TEN HOME SOLUTIONS <span className="hidden text-[#999] sm:inline">/</span>{' '}
+                <span className="hidden sm:inline">HEATING & AIR CONDITIONING</span>
+              </p>
+              <h1
+                data-hero-line
+                className="font-heading text-[2.25rem] font-semibold leading-[1.1] tracking-[-.04em] text-white sm:text-5xl sm:leading-[1.05] sm:tracking-[-.055em] sm:text-[#111] lg:text-6xl xl:text-[4.5rem]"
               >
-                <Phone size={16} /> CALL 647-619-1472
-              </a>
+                Comfort,
+                <br />
+                engineered for
+                <br />
+                <span className="bg-gradient-to-r from-[#F36A25] via-[#ed6d32] to-[#0877D9] bg-clip-text text-transparent">
+                  every season.
+                </span>
+              </h1>
+              <p
+                data-hero-line
+                className="mt-4 max-w-md text-sm leading-6 text-white/90 sm:mt-5 sm:leading-8 sm:text-base sm:text-[#606060] md:text-lg"
+              >
+                Professional heating and air conditioning services designed to keep your home
+                comfortable through every season.
+              </p>
+              <div data-hero-line className="mt-6 flex flex-col gap-3 sm:mt-7 sm:flex-row">
+                <Link
+                  href="/contact"
+                  className="inline-flex min-h-13 items-center justify-center gap-3 rounded-full bg-[#F36D2B] px-7 text-xs font-bold text-white transition hover:-translate-y-0.5 hover:bg-[#dd581a] sm:min-h-14"
+                >
+                  REQUEST SERVICE
+                  <ArrowUpRight size={17} />
+                </Link>
+                <a
+                  href="tel:6476191472"
+                  className="inline-flex min-h-13 items-center justify-center gap-3 rounded-full border border-white/40 bg-white/10 px-7 text-xs font-bold text-white backdrop-blur transition hover:border-white sm:min-h-14 sm:border-black/15 sm:bg-white sm:text-[#111] sm:hover:border-black"
+                >
+                  <Phone size={16} /> CALL 647-619-1472
+                </a>
+              </div>
+              <p
+                data-hero-line
+                className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-1.5 text-[10px] font-bold tracking-[.12em] text-white/85 sm:mt-7 sm:text-[#777]"
+              >
+                <span className="h-2 w-2 rounded-full bg-[#08a8d7]" /> HEATING{' '}
+                <span className="text-white/40 sm:text-[#ccc]">/</span> COOLING{' '}
+                <span className="text-white/40 sm:text-[#ccc]">/</span> REPAIR{' '}
+                <span className="text-white/40 sm:text-[#ccc]">/</span> INSTALLATION
+              </p>
             </div>
-            <p
-              data-hero-line
-              className="mt-7 flex flex-wrap items-center gap-x-3 gap-y-2 text-[10px] font-bold tracking-[.12em] text-white/85 sm:text-[#777]"
-            >
-              <span className="h-2 w-2 rounded-full bg-[#08a8d7]" /> HEATING{' '}
-              <span className="text-white/40 sm:text-[#ccc]">/</span> COOLING{' '}
-              <span className="text-white/40 sm:text-[#ccc]">/</span> REPAIR{' '}
-              <span className="text-white/40 sm:text-[#ccc]">/</span> INSTALLATION
-            </p>
           </div>
         </div>
 

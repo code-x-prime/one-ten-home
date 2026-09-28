@@ -43,7 +43,8 @@ export default function PageHero({
             sizes="100vw"
             className="object-cover object-[70%_center] sm:object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent sm:bg-gradient-to-r sm:from-[#FAF8F2] sm:via-[#FAF8F2]/70 sm:to-transparent lg:from-[#FAF8F2] lg:via-[#FAF8F2]/40 lg:to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/35 to-black/45 sm:bg-gradient-to-r sm:from-[#FAF8F2] sm:via-[#FAF8F2]/70 sm:to-transparent lg:from-[#FAF8F2] lg:via-[#FAF8F2]/40 lg:to-transparent" />
+          <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-black/60 to-transparent sm:hidden" />
 
           {/* Decorative diagonal wave, bottom-right */}
           <div className="pointer-events-none absolute bottom-0 right-0 hidden h-40 w-[60%] lg:block [clip-path:polygon(30%_100%,100%_40%,100%_100%)]">

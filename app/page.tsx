@@ -9,7 +9,6 @@ import {
   Droplet,
   Flame,
   Home as HomeIcon,
-  Phone,
   Settings2,
   ShieldCheck,
   Snowflake,
