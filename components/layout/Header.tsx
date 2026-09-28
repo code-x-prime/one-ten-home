@@ -162,7 +162,7 @@ export default function Header() {
         className={`border-b transition-all duration-300 ${scrolled ? 'border-black/10 bg-white/95 shadow-[0_8px_30px_rgba(17,17,17,.06)] backdrop-blur-xl' : 'border-transparent bg-[#FAF8F2]/80 backdrop-blur-md'}`}
       >
         <div
-          className={`mx-auto flex max-w-[1440px] items-center justify-between gap-4 px-5 transition-[height] duration-300 sm:px-8 lg:px-12 xl:px-16 ${scrolled ? 'h-16 lg:h-[72px]' : 'h-16 lg:h-20'}`}
+          className={`mx-auto flex max-w-[1440px] items-center justify-between gap-4 px-5 transition-[height] duration-300 sm:px-8 lg:px-12 xl:px-16 ${scrolled ? 'h-[76px] lg:h-20' : 'h-[76px] lg:h-24'}`}
         >
           <Link
             href="/"
@@ -172,10 +172,10 @@ export default function Header() {
             <Image
               src="/logo.png"
               alt="One Ten Home Solutions"
-              width={80}
-              height={80}
+              width={100}
+              height={100}
               priority
-              className={`shrink-0 object-contain transition-all duration-300 ${scrolled ? 'h-12 w-12 md:h-14 md:w-14' : 'h-14 w-14 md:h-[68px] md:w-[68px]'}`}
+              className={`shrink-0 object-contain transition-all duration-300 ${scrolled ? 'h-14 w-14 md:h-16 md:w-16' : 'h-16 w-16 md:h-20 md:w-20'}`}
             />
             <span className="hidden text-[14px] font-extrabold leading-tight tracking-[-.05em] text-[#111] sm:block">
               ONE TEN
@@ -315,9 +315,9 @@ export default function Header() {
               <Image
                 src="/logo.png"
                 alt="One Ten Home Solutions"
-                width={68}
-                height={68}
-                className="h-16 w-16 object-contain"
+                width={84}
+                height={84}
+                className="h-20 w-20 object-contain"
               />
             </Link>
             <button

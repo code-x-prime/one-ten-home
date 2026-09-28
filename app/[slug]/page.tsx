@@ -516,7 +516,7 @@ function Contact() {
               <div data-reveal className="mt-9 grid min-w-0 gap-3">
                 <a
                   href="tel:6476191472"
-                  className="group flex items-center gap-4 rounded-2xl bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg"
+                  className="group flex min-w-0 items-center gap-4 rounded-2xl bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg"
                 >
                   <span
                     data-service-badge
@@ -539,7 +539,7 @@ function Contact() {
                 </a>
                 <a
                   href="tel:6479927212"
-                  className="group flex items-center gap-4 rounded-2xl bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg"
+                  className="group flex min-w-0 items-center gap-4 rounded-2xl bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg"
                 >
                   <span
                     data-service-badge
@@ -562,7 +562,7 @@ function Contact() {
                 </a>
                 <a
                   href="mailto:onetenhomesolutions@gmail.com"
-                  className="group flex items-center gap-4 rounded-2xl bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg"
+                  className="group flex min-w-0 items-center gap-4 rounded-2xl bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg"
                 >
                   <span
                     data-service-badge
