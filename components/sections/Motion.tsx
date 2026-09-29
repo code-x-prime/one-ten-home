@@ -62,6 +62,16 @@ export default function Motion() {
             ease: 'back.out(1.6)',
             clearProps: 'all',
           })
+          // Canadian-owned badge: a soft light sweep that repeats so the banner catches
+          // the eye without being distracting.
+          gsap.utils.toArray<HTMLElement>('[data-shine]').forEach((el) => {
+            const width = (el.parentElement?.offsetWidth ?? 260) + 80
+            gsap.fromTo(
+              el,
+              { x: -60 },
+              { x: width, duration: 1.4, ease: 'power2.inOut', repeat: -1, repeatDelay: 2.2 },
+            )
+          })
           revealAll('[data-reveal]', {
             y: 28,
             opacity: 0,
