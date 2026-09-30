@@ -259,7 +259,11 @@ export const services: Service[] = [
 export const faqs: [string, string][] = [
   [
     'What HVAC services do you provide?',
-    'We help with furnaces, air conditioners, heat pumps, water heaters, humidifiers, smart thermostats, and routine maintenance.',
+    'We help with furnaces, air conditioners, heat pumps, water heaters, gas fireplaces, gas appliances, humidifiers, smart thermostats, and routine maintenance.',
+  ],
+  [
+    'Do you service fireplaces and gas appliances?',
+    'Yes. We service and repair gas fireplaces and other gas appliances, and the gas work is completed by a licensed gas technician.',
   ],
   [
     'Do you repair furnaces?',

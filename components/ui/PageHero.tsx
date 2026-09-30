@@ -11,6 +11,7 @@ import {
   Snowflake,
   Wrench,
 } from 'lucide-react'
+import CanadianBadge from '@/components/ui/CanadianBadge'
 
 export default function PageHero({
   eyebrow,
@@ -97,6 +98,7 @@ export default function PageHero({
 
           <div className="relative flex h-full flex-col justify-end p-5 pb-6 sm:justify-center sm:p-8 sm:pb-8 lg:p-14 lg:pb-14 xl:p-16 xl:pb-16">
             <div className="max-w-xl">
+              <CanadianBadge />
               <p
                 data-hero-line
                 className="mb-4 flex items-center gap-3 text-[11px] font-bold tracking-[.18em] text-white sm:text-[#626262]"

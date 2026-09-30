@@ -146,7 +146,7 @@ function About() {
                 Flame,
                 'orange',
                 'Heating',
-                'Furnaces, water heaters, humidifiers, and seasonal care.',
+                'Furnaces, fireplaces, gas appliances, water heaters, humidifiers, and seasonal care.',
                 '/heating',
                 '/images/technician-furnace.jpg',
               ],

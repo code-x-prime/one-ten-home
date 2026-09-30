@@ -119,10 +119,12 @@ export default function Home() {
     <>
       <Hero />
       <div className="border-y border-black/10 bg-white">
-        <div className="mx-auto grid max-w-[1440px] grid-cols-2 gap-0 px-5 sm:grid-cols-3 sm:px-8 lg:grid-cols-5 lg:px-12 xl:px-16">
+        <div className="mx-auto grid max-w-[1440px] grid-cols-2 gap-0 px-5 sm:grid-cols-3 sm:px-8 lg:grid-cols-7 lg:px-12 xl:px-16">
           {[
-            [Flame, 'Heating services'],
-            [Snowflake, 'Cooling services'],
+            [Flame, 'Heating'],
+            [Snowflake, 'Cooling'],
+            [Flame, 'Fireplaces'],
+            [Zap, 'Gas appliances'],
             [Wrench, 'Repairs'],
             [Settings2, 'Installation'],
             [Wind, 'Maintenance'],
