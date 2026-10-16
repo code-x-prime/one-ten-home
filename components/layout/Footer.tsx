@@ -26,29 +26,6 @@ const serviceIcons: Record<string, typeof Wrench> = {
   'gas-appliance': Zap,
 }
 
-const socials = [
-  {
-    label: 'Facebook',
-    href: '#',
-    path: 'M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12',
-  },
-  {
-    label: 'Instagram',
-    href: '#',
-    path: 'M12 2c2.72 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.47.66.26 1.21.6 1.76 1.15.5.5.9 1.1 1.15 1.76.25.64.42 1.37.47 2.43.05 1.06.06 1.4.06 4.12s-.01 3.06-.06 4.12c-.05 1.06-.22 1.79-.47 2.43a4.9 4.9 0 0 1-1.15 1.76 4.9 4.9 0 0 1-1.76 1.15c-.64.25-1.37.42-2.43.47-1.06.05-1.4.06-4.12.06s-3.06-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.47a4.9 4.9 0 0 1-1.76-1.15 4.9 4.9 0 0 1-1.15-1.76c-.25-.64-.42-1.37-.47-2.43C2.01 15.06 2 14.72 2 12s.01-3.06.06-4.12c.05-1.06.22-1.79.47-2.43.26-.66.6-1.21 1.15-1.76a4.9 4.9 0 0 1 1.76-1.15c.64-.25 1.37-.42 2.43-.47C8.94 2.01 9.28 2 12 2m0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10m0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4M17.7 5.4a1.17 1.17 0 1 0 0 2.34 1.17 1.17 0 0 0 0-2.34',
-  },
-  {
-    label: 'YouTube',
-    href: '#',
-    path: 'M21.8 8.3a2.8 2.8 0 0 0-2-2C18.1 6 12 6 12 6s-6.1 0-7.8.3a2.8 2.8 0 0 0-2 2A29 29 0 0 0 2 12a29 29 0 0 0 .2 3.7 2.8 2.8 0 0 0 2 2C5.9 18 12 18 12 18s6.1 0 7.8-.3a2.8 2.8 0 0 0 2-2A29 29 0 0 0 22 12a29 29 0 0 0-.2-3.7M10 15V9l5.2 3z',
-  },
-  {
-    label: 'LinkedIn',
-    href: '#',
-    path: 'M6.94 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0M7 8.48H3V21h4zM13.32 8.48H9.34V21h3.94v-6.57c0-1.74.33-3.42 2.48-3.42 2.12 0 2.15 1.98 2.15 3.53V21H22v-7.93c0-3.66-.79-6.47-5.06-6.47-2.05 0-3.43 1.13-4 2.2h-.05z',
-  },
-]
-
 export default function Footer() {
   return (
     <footer className="relative overflow-hidden bg-[#0B1220] text-white">
@@ -79,26 +56,6 @@ export default function Footer() {
               Thoughtful care for home comfort. Reliable heating & cooling solutions for a
               comfortable tomorrow.
             </p>
-            <div className="mt-6 flex gap-2.5">
-              {socials.map((s) => (
-                <a
-                  key={s.label}
-                  href={s.href}
-                  aria-label={s.label}
-                  className="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-white/70 transition hover:border-white/40 hover:text-white"
-                >
-                  <svg
-                    width="15"
-                    height="15"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path d={s.path} />
-                  </svg>
-                </a>
-              ))}
-            </div>
           </div>
 
           <div className="flex flex-col gap-3.5">
@@ -173,7 +130,20 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-xs text-white/45 sm:flex-row">
-          <span>© 2026 One Ten Home Solutions. All rights reserved.</span>
+          <div className="flex flex-col items-center gap-1 sm:items-start">
+            <span>© 2026 One Ten Home Solutions. All rights reserved.</span>
+            <span>
+              Design By :{' '}
+              <a
+                href="https://groxmedia.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-white/70 transition hover:text-[#F79A59]"
+              >
+                Grox Media
+              </a>
+            </span>
+          </div>
           <div className="flex items-center gap-5">
             <Link href="/privacy-policy" className="hover:text-white">
               Privacy Policy

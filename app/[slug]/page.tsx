@@ -637,7 +637,7 @@ function Legal({ privacy }: { privacy: boolean }) {
     ],
     [
       'How your information is shared',
-      "Preparing a service request through this website opens your own device's messaging app, addressed to our business number; the message is sent by you, over your mobile carrier's network, the same as any other text message. We may share necessary details with subcontractors or suppliers only where required to complete a job you have requested, and only to the extent needed for that purpose.",
+      'When you submit the service request form, your details are delivered to our team by email using Brevo, a third-party email delivery provider that processes the message on our behalf and may store it on servers outside Canada. If you text or call us, your mobile carrier handles that message or call. We may share necessary details with subcontractors or suppliers only where required to complete a job you have requested, and only to the extent needed for that purpose.',
     ],
     [
       'Data retention',

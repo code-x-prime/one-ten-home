@@ -291,3 +291,17 @@ export const faqs: [string, string][] = [
   ],
   ['How can I request service?', 'Call or text 647-619-1472, or use the service request page.'],
 ]
+
+export const requestServices = [
+  'Furnace Repair',
+  'Furnace Installation',
+  'Air Conditioning',
+  'AC Maintenance',
+  'Heat Pump',
+  'Water Heater',
+  'Fireplace',
+  'Gas Appliance',
+  'Humidifier',
+  'Smart Thermostat',
+  'Other',
+] as const
