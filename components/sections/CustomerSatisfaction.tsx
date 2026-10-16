@@ -110,7 +110,7 @@ export default function CustomerSatisfaction() {
         <div className="relative mx-auto w-full max-w-md pb-10 pr-8 pt-4 lg:max-w-none">
           <div className="relative aspect-[4/3] w-full -rotate-1 overflow-hidden rounded-[24px] shadow-[0_30px_80px_rgba(17,17,17,.18)]">
             <Image
-              src="/images/customer-experience.png"
+              src="/images/customer-experience.jpg"
               alt="An HVAC technician talking with a homeowner in their living room"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"

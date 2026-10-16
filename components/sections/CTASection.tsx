@@ -36,7 +36,7 @@ export default function CTASection({
   return (
     <section className={`relative overflow-hidden text-white ${bg}`}>
       <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[46%] lg:block [clip-path:polygon(18%_0,100%_0,100%_100%,0_100%)]">
-        <Image src="/images/hero-main.png" alt="" fill sizes="46vw" className="object-cover" />
+        <Image src="/images/hero-main.jpg" alt="" fill sizes="46vw" className="object-cover" />
         <div
           className={`absolute inset-0 bg-gradient-to-r ${scrimFrom} via-transparent to-transparent`}
         />
@@ -100,7 +100,7 @@ export default function CTASection({
         <div className="relative -mx-5 h-56 sm:-mx-8 sm:h-72 lg:hidden">
           <div className="relative h-full w-full overflow-hidden">
             <Image
-              src="/images/hero-main.png"
+              src="/images/hero-main.jpg"
               alt="An HVAC technician servicing a residential outdoor air conditioning condenser"
               fill
               sizes="100vw"

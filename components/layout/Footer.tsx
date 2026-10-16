@@ -32,7 +32,7 @@ export default function Footer() {
       <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-br from-[#F3692C] via-[#0B1220]/0 to-[#0877D9] opacity-40 [mask-image:linear-gradient(to_bottom,black,transparent)]" />
       <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[38%] lg:block">
         <Image
-          src="/images/footer-home.png"
+          src="/images/footer-home.jpg"
           alt=""
           fill
           sizes="40vw"

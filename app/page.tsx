@@ -25,6 +25,8 @@ import FAQ from '@/components/sections/FAQ'
 import CustomerSatisfaction from '@/components/sections/CustomerSatisfaction'
 import Hero from '@/components/sections/Hero'
 import { faqs } from '@/lib/content'
+import JsonLd from '@/components/ui/JsonLd'
+import { faqSchema } from '@/lib/seo'
 
 const toneStyles = {
   orange: {
@@ -117,6 +119,7 @@ const serviceCards = [
 export default function Home() {
   return (
     <>
+      <JsonLd data={faqSchema} />
       <Hero />
       <div className="border-y border-black/10 bg-white">
         <div className="mx-auto grid max-w-[1440px] grid-cols-2 gap-0 px-5 sm:grid-cols-3 sm:px-8 lg:grid-cols-7 lg:px-12 xl:px-16">
@@ -434,7 +437,7 @@ export default function Home() {
               className="group relative flex aspect-[4/3] flex-col justify-end overflow-hidden rounded-2xl p-5 text-white sm:aspect-[16/9] sm:p-7 lg:hidden"
             >
               <Image
-                src="/images/signature-comfort.png"
+                src="/images/signature-comfort.jpg"
                 alt="A family relaxing in a warm living room"
                 fill
                 sizes="100vw"
@@ -473,7 +476,7 @@ export default function Home() {
               className="group relative flex aspect-[4/3] flex-col justify-end overflow-hidden rounded-2xl p-5 text-white sm:aspect-[16/9] sm:p-7 lg:hidden"
             >
               <Image
-                src="/images/signature-comfort.png"
+                src="/images/signature-comfort.jpg"
                 alt="A man relaxing comfortably in a cool, bright living room"
                 fill
                 sizes="100vw"
@@ -509,7 +512,7 @@ export default function Home() {
             <div className="relative hidden lg:block">
               <div data-signature-image className="relative aspect-[21/9] w-full">
                 <Image
-                  src="/images/signature-comfort.png"
+                  src="/images/signature-comfort.jpg"
                   alt="A family enjoying a warm living room on one side and a relaxed home cooling scene on the other, representing year-round comfort"
                   fill
                   sizes="100vw"
@@ -598,7 +601,7 @@ export default function Home() {
       </section>
       <section className="relative overflow-hidden bg-[#0B1220] py-14 text-white sm:py-16 lg:py-20">
         <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[42%] lg:block">
-          <Image src="/images/footer-home.png" alt="" fill sizes="42vw" className="object-cover" />
+          <Image src="/images/footer-home.jpg" alt="" fill sizes="42vw" className="object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0B1220] via-[#0B1220]/30 to-transparent" />
         </div>
         <div className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-br from-[#F3692C]/25 via-transparent to-[#0877D9]/25 [mask-image:linear-gradient(to_bottom,black,transparent)]" />

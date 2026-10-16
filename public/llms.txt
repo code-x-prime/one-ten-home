@@ -1,0 +1,22 @@
+# One Ten Home Solutions
+
+> Canadian-owned heating, air conditioning, fireplace and gas appliance service company based in Oshawa, Ontario, serving Durham Region and the Greater Toronto Area.
+
+Contact: call or text 647-619-1472 (alternate 647-992-7212), email onetenhomesolutions@gmail.com. Website: https://onetenhomesolutions.com
+
+## Services
+- [Furnace Repair & Installation](https://onetenhomesolutions.com/services/furnace-repair)
+- [Air Conditioning Repair & Maintenance](https://onetenhomesolutions.com/services/air-conditioning)
+- [Heat Pump Repair & Installation](https://onetenhomesolutions.com/services/heat-pump)
+- [Water Heater Repair](https://onetenhomesolutions.com/services/water-heater)
+- [Fireplace Service & Repair](https://onetenhomesolutions.com/services/fireplace)
+- [Gas Appliance Service & Repair](https://onetenhomesolutions.com/services/gas-appliance)
+- [Humidifier Installation](https://onetenhomesolutions.com/services/humidifier)
+- [Smart Thermostat Installation](https://onetenhomesolutions.com/services/smart-thermostat)
+
+## Pages
+- [All services](https://onetenhomesolutions.com/services)
+- [Heating](https://onetenhomesolutions.com/heating)
+- [Cooling](https://onetenhomesolutions.com/cooling)
+- [About](https://onetenhomesolutions.com/about)
+- [Contact / request service](https://onetenhomesolutions.com/contact)

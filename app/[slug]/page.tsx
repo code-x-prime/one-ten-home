@@ -25,6 +25,8 @@ import SectionHeading from '@/components/ui/SectionHeading'
 import CTASection from '@/components/sections/CTASection'
 import ContactForm from '@/components/sections/ContactForm'
 import { services } from '@/lib/content'
+import JsonLd from '@/components/ui/JsonLd'
+import { pageMeta, pageSchema, pageSeo } from '@/lib/seo'
 
 const pages = ['about', 'heating', 'cooling', 'contact', 'privacy-policy', 'terms-and-conditions']
 export function generateStaticParams() {
@@ -32,18 +34,9 @@ export function generateStaticParams() {
 }
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const names: Record<string, string> = {
-    about: 'About',
-    heating: 'Heating Services',
-    cooling: 'Cooling Services',
-    contact: 'Contact & Request Service',
-    'privacy-policy': 'Privacy Policy',
-    'terms-and-conditions': 'Terms & Conditions',
-  }
-  return {
-    title: names[slug] || 'Page',
-    description: `${names[slug] || 'One Ten Home Solutions'} | HVAC and gas appliance service in Oshawa and the GTA. Call or text 647-619-1472.`,
-  }
+  const seo = pageSeo[slug]
+  if (!seo) return {}
+  return pageMeta(`/${slug}`, seo.title, seo.description)
 }
 
 function About() {
@@ -67,7 +60,7 @@ function About() {
             className="relative order-2 aspect-[4/3] overflow-hidden rounded-2xl lg:order-1 lg:rounded-[28px]"
           >
             <Image
-              src="/images/customer-experience.png"
+              src="/images/customer-experience.jpg"
               alt="An HVAC technician talking with a homeowner about their home comfort needs"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -750,9 +743,22 @@ function Legal({ privacy }: { privacy: boolean }) {
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   if (!pages.includes(slug)) notFound()
-  if (slug === 'about') return <About />
-  if (slug === 'heating') return <Category heating />
-  if (slug === 'cooling') return <Category heating={false} />
-  if (slug === 'contact') return <Contact />
-  return <Legal privacy={slug === 'privacy-policy'} />
+  const body =
+    slug === 'about' ? (
+      <About />
+    ) : slug === 'heating' ? (
+      <Category heating />
+    ) : slug === 'cooling' ? (
+      <Category heating={false} />
+    ) : slug === 'contact' ? (
+      <Contact />
+    ) : (
+      <Legal privacy={slug === 'privacy-policy'} />
+    )
+  return (
+    <>
+      <JsonLd data={pageSchema(slug)} />
+      {body}
+    </>
+  )
 }

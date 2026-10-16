@@ -13,12 +13,13 @@ import {
 import PageHero from '@/components/ui/PageHero'
 import CTASection from '@/components/sections/CTASection'
 import { services } from '@/lib/content'
+import { pageMeta } from '@/lib/seo'
 
-export const metadata = {
-  title: 'Heating, Cooling & Gas Appliance Services',
-  description:
-    'Furnace repair, air conditioning, heat pumps, water heaters, fireplaces, gas appliances, humidifiers, smart thermostats, and seasonal HVAC maintenance.',
-}
+export const metadata = pageMeta(
+  '/services',
+  'HVAC, Fireplace & Gas Appliance Services in Oshawa',
+  'Furnace repair, air conditioning, heat pumps, water heaters, fireplaces, gas appliances, humidifiers and smart thermostats in Oshawa and the GTA.',
+)
 
 const iconMap: Record<string, typeof Flame> = {
   'furnace-repair': Flame,

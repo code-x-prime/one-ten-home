@@ -8,7 +8,7 @@ import CanadianBadge from '@/components/ui/CanadianBadge'
 
 const slides = [
   {
-    src: '/images/hero-main.png',
+    src: '/images/hero-main.jpg',
     alt: 'An HVAC technician servicing a residential outdoor air conditioning condenser beside a modern home',
     mobilePosition: 'object-[70%_center]',
   },

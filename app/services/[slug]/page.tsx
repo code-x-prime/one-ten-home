@@ -20,6 +20,8 @@ import SectionHeading from '@/components/ui/SectionHeading'
 import FAQ from '@/components/sections/FAQ'
 import CTASection from '@/components/sections/CTASection'
 import { services } from '@/lib/content'
+import JsonLd from '@/components/ui/JsonLd'
+import { pageMeta, serviceSchema } from '@/lib/seo'
 
 const serviceIcons: Record<string, typeof Flame> = {
   'furnace-repair': Flame,
@@ -95,7 +97,12 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   const s = services.find((x) => x.slug === slug)
-  return { title: s?.title ?? 'Service', description: s?.description }
+  if (!s) return {}
+  return pageMeta(
+    `/services/${slug}`,
+    `${s.title} in Oshawa`,
+    `${s.description} Serving Oshawa and the GTA. Call or text 647-619-1472.`,
+  )
 }
 export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
@@ -108,6 +115,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   const accentText = blue ? 'text-[#0877D9]' : 'text-[#F3692C]'
   return (
     <>
+      <JsonLd data={serviceSchema(slug)} />
       <PageHero
         eyebrow={`${s.category} / ONE TEN HOME SOLUTIONS`}
         title={d.hero}
